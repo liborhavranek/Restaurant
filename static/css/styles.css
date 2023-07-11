@@ -206,10 +206,19 @@ position: absolute;
 
   }
 
+.restaurant-images{
+    border-radius: 50%;
+    max-width: 450px;
+}
 
+.second-section-h{
+    color:red;
+}
 
-
-
+.second-section-text{
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
 
 
 
