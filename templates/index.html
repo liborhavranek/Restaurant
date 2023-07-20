@@ -96,48 +96,44 @@
 <!-- Druhá sekce -->
 <section class="section second-section">
     <div class="container">
-        <h1 class="welcome-text pt-5">
+        <h1 class="welcome-text pt-5 show-from-bottom">
             <span>Vítejte ve </span>
             <span>SteakHouse</span>
         </h1>
 
-                <div class="row py-5">
+                <div class="row pt-5">
             <div class="col-12 col-lg-4">
-                    <h1 class="second-section-h pb-2">Skvělé místo</h1>
-                                <p class="second-section-text mx-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer malesuada. Aenean placerat.
+                    <h1 class="second-section-h pb-2 show-from-bottom">Skvělé místo</h1>
+                                <p class="second-section-text mx-3 show-from-bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer malesuada. Aenean placerat.
                     Donec quis nibh at felis congue commodo. Nulla pulvinar eleifend sem.
                     Pellentesque sapien. Integer rutrum, orci vestibulum ullamcorper ultricies,
                     lacus quam ultricies odio, vitae placerat pede sem sit amet enim</p>
             </div>
 
             <div class="col-12 col-lg-4">
-                <h1 class="second-section-h pb-2">Výborné jídlo</h1>
-                                <p class="second-section-text mx-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer malesuada. Aenean placerat.
+                <h1 class="second-section-h pb-2 show-from-bottom">Výborné jídlo</h1>
+                                <p class="second-section-text mx-3 show-from-bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer malesuada. Aenean placerat.
                     Donec quis nibh at felis congue commodo. Nulla pulvinar eleifend sem.
                     Pellentesque sapien. Integer rutrum, orci vestibulum ullamcorper ultricies,
                     lacus quam ultricies odio, vitae placerat pede sem sit amet enim</p>
             </div>
 
                                 <div class="col-12 col-lg-4">
-                                    <h1 class="second-section-h pb-2 ">Dobré pití</h1>
-                <p class="second-section-text mx-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer malesuada. Aenean placerat.
+                                    <h1 class="second-section-h pb-2 show-from-bottom">Dobré pití</h1>
+                <p class="second-section-text mx-3 show-from-bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer malesuada. Aenean placerat.
                     Donec quis nibh at felis congue commodo. Nulla pulvinar eleifend sem.
                     Pellentesque sapien. Integer rutrum, orci vestibulum ullamcorper ultricies,
                     lacus quam ultricies odio, vitae placerat pede sem sit amet enim</p>
             </div>
 
-        <div class="row py-5">
-            <div class="col-12 col-lg-8 py-5">
-
-                    <img class="img-fluid restaurant-images" src="{{ url_for('static', filename='images/restaurant.jpg') }}">
-            </div>
-
-            <div class="col-12 col-lg-4">
-                ahojky
-            </div>
-
+<div class="row pt-5 show-from-bottom-image">
+  <div class="col-12 col-lg-6 py-5">
+    <img class="img-fluid restaurant-images show-from-bottom" src="{{ url_for('static', filename='images/restaurant.jpg') }}">
+  </div>
+  <div class="col-12 col-lg-6 py-5">
+    <img class="img-fluid restaurant-images show-from-bottom" src="{{ url_for('static', filename='images/restaurant1.jpg') }}">
+  </div>
 </div>
-
         </div>
     </div>
 </section>
@@ -145,33 +141,155 @@
 <!-- Třetí sekce -->
 <section class="section third-section">
     <div class="container">
-        <h2>Třetí sekce</h2>
-        <p>Toto je třetí sekce na stránce.</p>
+        <h1 class="speciality-text pt-5 show-from-bottom">
+            <span>SteakHouse</span>
+            <span>Speciality</span>
+        </h1>
+
+        <!-- Gallery -->
+        <div class="row py-5">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/food1.jpg') }}" class="w-100 shadow-1-strong rounded mb-4 show-from-bottom" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay-text-h-one">Hovězí závitek</h1>
+                        <p class="overlay-text-p-one">Grilované hovězí s bramborovou kaší omáčkou a zeleninou</p>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/food3.jpg') }}" class="w-100 shadow-1-strong rounded mb-4 show-from-bottom" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay-text-h-one">Vepřová krkovice</h1>
+                        <p class="overlay-text-p-one">Vepřová krkovice na grilu s francouzkými bramborami a zeleninou</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/food5.jpg') }}" class="w-100 shadow-1-strong rounded mb-4 show-from-bottom" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay-text-h-one">Mleté vepřové</h1>
+                        <p class="overlay-text-p-one">Mleté vepřové na grilu s vejcem brambory a omáčkou</p>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/food4.jpg') }}" class="w-100 shadow-1-strong rounded mb-4 show-from-bottom" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay-text-h-one">Vepřový bůček</h1>
+                        <p class="overlay-text-p-one">Vepřový bůček na prkně s omáčkou a chlazeným pivem</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/food6.jpg') }}" class="w-100 shadow-1-strong rounded mb-4 show-from-bottom" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay-text-h-one">Hovězí steak</h1>
+                        <p class="overlay-text-p-one">Hovězí steak s cibulovými kroužky a grilovanou kukuřicí</p>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/food7.jpg') }}" class="w-100 shadow-1-strong rounded mb-4 show-from-bottom" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay-text-h-one">Krkovička na grilu</h1>
+                        <p class="overlay-text-p-one">Vepčová krkovice na grilu se zeleninou a rajčatovou omáčkou</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery -->
+
+
+        <div class="row">
+            <div class="col-12 col-lg-4 py-3 show-from-bottom">
+                <a class="food-link" href="#">Jídelní lístek</a>
+
+            </div>
+
+                        <div class="col-12 col-lg-4 py-3 show-from-bottom">
+               <a class="food-link" href="#">Nápojový lístek</a>
+
+            </div>
+
+                        <div class="col-12 col-lg-4 py-3 show-from-bottom">
+             <a class="food-link" href="#">Týdenní menu</a>
+
+            </div>
+
+        </div>
     </div>
 </section>
 
 <section class="section four-section">
     <div class="container">
-        <h2>Třetí sekce</h2>
-        <p>Toto je třetí sekce na stránce.</p>
+    <h1 class="kontakt-text pt-5 show-from-bottom"> Rezervace  </h1>
+
+
+<form method="POST" autocomplete="off" class="form">
+    {{ form.csrf_token }}
+    {{ form.hidden_tag() }}
+<div class="row">
+    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
+        <div class="form-text py-3">{{ form.reservation_date.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.reservation_date(class="form-control") }}</div>
+    </div>
+
+    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
+       <div class="form-text py-3"> {{ form.reservation_time.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.reservation_time(class="form-control") }}</div>
+    </div>
+
+    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
+        <div class="form-text py-3">{{ form.num_guests.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.num_guests(class="form-control") }}</div>
+    </div>
+</div>
+
+    <div class="row">
+    <div class="form-group col-12 col-lg-4 show-from-bottom">
+        <div class="form-text py-3">{{ form.name.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.name(class="form-control") }}</div>
+    </div>
+
+    <div class="form-group col-12 col-lg-4 show-from-bottom">
+        <div class="form-text py-3">{{ form.email.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.email(class="form-control") }}</div>
+    </div>
+
+    <div class="form-group col-12 col-lg-4 show-from-bottom">
+        <div class="form-text py-3">{{ form.phone.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.phone(class="form-control") }}</div>
+    </div>
+
+        </div>
+
+    <input type="submit" value="Create Reservation" class="btn btn-danger my-5 show-from-bottom">
+</form>
+
+        <p class="reservation-text show-from-bottom">
+            Online rezervace fungují každý všední den od 7:30 do 17:00. </p>
+
+<p class="reservation-text show-from-bottom">Potvrzení rezervace obdržíte emailem nebo telefonicky do 24 hodin. Děkujeme</p>
+
+
+
     </div>
 </section>
 
 
 <section class="section five-section">
     <div class="container">
-        <h2>Třetí sekce</h2>
+        <h2>Kontakt</h2>
         <p>Toto je třetí sekce na stránce.</p>
     </div>
 </section>
 
 
-<section class="section six-section">
-    <div class="container">
-        <h2>Třetí sekce</h2>
-        <p>Toto je třetí sekce na stránce.</p>
-    </div>
-</section>
 
 <!-- Footer -->
 <footer class="bg-light">
@@ -186,6 +304,8 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bottom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/image-bottom.js') }}"></script>
 <script src="{{ url_for('static', filename='js/textfirstsection.js') }}"></script>
 </body>
 </html>
