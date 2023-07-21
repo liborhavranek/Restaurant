@@ -60,10 +60,10 @@
                                 <a class="nav-link rotate-minus-15" href="#">Fotogalerie</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link only-hover" href="#">Kontakt</a>
+                                <a class="nav-link only-hover" href="#contact">Kontakt</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link rotate-15" href="#">Rezervace</a>
+                                <a class="nav-link rotate-15" href="#reservation">Rezervace</a>
                             </li>
                         </ul>
                     </div>
@@ -225,7 +225,7 @@
     </div>
 </section>
 
-<section class="section four-section">
+<section class="section four-section" id="reservation">
     <div class="container">
     <h1 class="kontakt-text pt-5 show-from-bottom"> Rezervace  </h1>
 
@@ -233,22 +233,6 @@
 <form method="POST" autocomplete="off" class="form">
     {{ form.csrf_token }}
     {{ form.hidden_tag() }}
-<div class="row">
-    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
-        <div class="form-text py-3">{{ form.reservation_date.label(class="form-label") }}</div>
-        <div class="form-field">{{ form.reservation_date(class="form-control") }}</div>
-    </div>
-
-    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
-       <div class="form-text py-3"> {{ form.reservation_time.label(class="form-label") }}</div>
-        <div class="form-field">{{ form.reservation_time(class="form-control") }}</div>
-    </div>
-
-    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
-        <div class="form-text py-3">{{ form.num_guests.label(class="form-label") }}</div>
-        <div class="form-field">{{ form.num_guests(class="form-control") }}</div>
-    </div>
-</div>
 
     <div class="row">
     <div class="form-group col-12 col-lg-4 show-from-bottom">
@@ -267,6 +251,22 @@
     </div>
 
         </div>
+<div class="row">
+    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
+        <div class="form-text py-3">{{ form.reservation_date.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.reservation_date(class="form-control") }}</div>
+    </div>
+
+    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
+       <div class="form-text py-3"> {{ form.reservation_time.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.reservation_time(class="form-control") }}</div>
+    </div>
+
+    <div class="form-group col-12 col-lg-4 py-3 show-from-bottom">
+        <div class="form-text py-3">{{ form.num_guests.label(class="form-label") }}</div>
+        <div class="form-field">{{ form.num_guests(class="form-control") }}</div>
+    </div>
+</div>
 
     <input type="submit" value="Create Reservation" class="btn btn-danger my-5 show-from-bottom">
 </form>
@@ -276,25 +276,92 @@
 
 <p class="reservation-text show-from-bottom">Potvrzení rezervace obdržíte emailem nebo telefonicky do 24 hodin. Děkujeme</p>
 
-
+<p class="reservation-text show-from-bottom">Telefonické rezervace lze na čísle +420 123 456 789</p>
 
     </div>
 </section>
 
 
-<section class="section five-section">
+<section class="section five-section" id="contact">
     <div class="container">
-        <h2>Kontakt</h2>
-        <p>Toto je třetí sekce na stránce.</p>
+        <h1 class="kontakt-text pt-5 show-from-bottom"> Kontakt  </h1>
+        <div class="row">
+            <div class="col-12 col-lg-6 py-3">
+                <div class="oteviracka text-center">
+<h1 class="py-3 show-from-bottom">Otevírací doba</h1>
+<table>
+<tbody>
+<tr class="show-from-bottom">
+<td>Pondělí</td>
+<td>11:00 - 23:00</td>
+</tr>
+<tr class="show-from-bottom">
+<td>Úterý</td>
+<td>11:00 - 23:00</td>
+</tr>
+<tr class="show-from-bottom">
+<td>Středa</td>
+<td>11:00 - 23:00</td>
+</tr>
+<tr class="show-from-bottom">
+<td>Čtvrtek</td>
+<td>11:00 - 23:00</td>
+</tr>
+<tr class="show-from-bottom">
+<td>Pátek</td>
+<td>11:00 - 23:00</td>
+</tr>
+<tr class="show-from-bottom">
+<td>Sobota</td>
+<td>11:00 - 23:00</td>
+</tr>
+<tr class="show-from-bottom">
+<td>Neděle</td>
+<td>11:00 - 22:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+            </div>
+
+           <div class="col-12 col-lg-6 py-3">
+                <h1 class="py-5 show-from-bottom">Adresa</h1>
+
+               <p class="py-1 adresa-text show-from-bottom">SteakHouse s. r. o.</p>
+               <p class="py-1 adresa-text show-from-bottom">ICO: 123456789</p>
+               <p class="py-1 adresa-text show-from-bottom">DIC: CZ123456789</p>
+               <p class="py-1 adresa-text show-from-bottom">Usilné 12358/69</p>
+               <p class="py-1 adresa-text show-from-bottom">České Budějovice 370 10</p>
+
+
+            </div>
+
+        </div>
+
+        <div class="row text-center">
+            <div class="col-12">
+            <h1 class="py-5 show-from-bottom">Ozvěte se nám</h1>
+                <p class="py-1 adresa-text show-from-bottom">+420 123 456 789 rezervace míst a jídla sebou</p>
+                <p class="py-1 adresa-text show-from-bottom">+420 963852741</p>
+                <p class="py-1 adresa-text show-from-bottom">staekhouse@stakehouse.com</p>
+        </div>
+        </div>
     </div>
 </section>
 
 
 
 <!-- Footer -->
-<footer class="bg-light">
+<footer class="footer">
     <div class="container">
-        <p>Toto je footer stránky.</p>
+        <div class="row text-center">
+            <div class="col-12">
+        <p class="py-2 copyright-text">© made with ❤️ by Libor Havránek</p>
+               <p><a href="/admin">admin</a></p>
+                </div>
+            </div>
     </div>
 </footer>
 

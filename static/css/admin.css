@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black !important;
+}
+
+
+.container {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gold-text{
+
+color: gold;
+font-size: 40px;
+}
+
+.white-text{
+color:white;
+}

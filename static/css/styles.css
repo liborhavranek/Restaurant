@@ -354,5 +354,34 @@ position: absolute;
 
 .form-text{
     color: white;
+    font-size: 18px;
+}
+
+/* Custom CSS for white, bigger text */
+.five-section {
+    color: white;
     font-size: 25px;
 }
+
+.five-section table {
+    width: 100%;
+}
+
+.five-section th, .five-section td {
+    padding: 10px;
+    text-align: center;
+}
+.five-section th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+
+footer{
+ background-color: #0f0f0f;
+}
+
+.copyright-text{
+ color: white;
+}
+

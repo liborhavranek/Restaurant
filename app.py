@@ -1,6 +1,6 @@
 
-
-from flask import Flask, render_template, redirect, url_for
+from flask_bcrypt import Bcrypt
+from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 from forms.reservation_form import ReservationForm
 from os import path
@@ -14,7 +14,13 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 # Create an instance of the SQLAlchemy class
 db = SQLAlchemy(app)
 
+bcrypt = Bcrypt(app)
+
+hashed_password = bcrypt.generate_password_hash('test').decode('utf-8')
+
+
 from models.reservation import Reservation
+
 
 @app.route("/", methods=['POST', 'GET'])
 def home_page():
@@ -34,6 +40,19 @@ def home_page():
         return redirect(url_for('registration_created'))
 
     return render_template("index.html", form=form)
+
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+    if request.method == 'POST':
+        password = request.form.get('password')
+
+        if bcrypt.check_password_hash(hashed_password, password):
+            return "Welcome to the admin page!"
+        else:
+            return "Invalid password"
+
+    return render_template('login.html')
 
 
 @app.route("/registration_created")
