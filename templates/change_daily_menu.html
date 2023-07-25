@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrace</title>
+<link rel="stylesheet" href="static/css/administration.css" />
+        <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script
+      src="https://kit.fontawesome.com/0182eb43ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Gravitas+One&family=Oranienbaum&family=Parisienne&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:ital,wght@0,200;0,400;0,600;1,700&family=Rye&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Administrace</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link py-5" href="#">Změnit denní menu</a>
+        <a class="nav-link py-5" href="#">Změnit jídelní lístek</a>
+        <a class="nav-link py-5" href="#">Změnit nápojový lístek</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="text-center px-5">
+
+<h1 class="py-5 welcome-in-administration">Změnit denní menu</h1>
+
+<div class="row">
+  <div class="col-12 col-lg-6">
+
+    <h2 class="py-3">Změna denního menu</h2>
+
+
+<form method="post" action="{{ url_for('change_daily_menu') }}">
+    {% set displayed_categories = [] %}
+    {% for category, form in menu_forms %}
+        {% if category not in displayed_categories %}
+            <!-- Display the category name -->
+            <h3>{{ category }}</h3>
+            {% set _ = displayed_categories.append(category) %}
+        {% endif %}
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="{{ category }}_{{ form.id.data }}_jidlo">Jídlo:</label>
+                <input type="text" class="form-control" name="{{ category }}_{{ form.id.data }}_jidlo" value="{{ form.jidlo.data }}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="{{ category }}_{{ form.id.data }}_mnozstvi">Množství:</label>
+                <input type="text" class="form-control" name="{{ category }}_{{ form.id.data }}_mnozstvi" value="{{ form.mnozstvi.data }}">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="{{ category }}_{{ form.id.data }}_cena">Cena:</label>
+                <input type="text" class="form-control" name="{{ category }}_{{ form.id.data }}_cena" value="{{ form.cena.data }}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="{{ category }}_{{ form.id.data }}_alergeny">Alergeny:</label>
+                <input type="text" class="form-control" name="{{ category }}_{{ form.id.data }}_alergeny" value="{{ form.alergeny.data }}">
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+
+    <input type="submit" class="btn btn-primary mb-3" value="Save">
+</form>
+
+  </div>
+
+<div class="col-12 col-lg-6" id="nahled-container">
+
+    <h2 class="py-3">Náhled denního menu</h2>
+                <iframe src="/daily_menu" width="100%" height="500px" frameborder="0"></iframe>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/change_daily_menu.js') }}"></script>
+</body>
+</html>

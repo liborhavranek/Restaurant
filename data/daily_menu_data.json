@@ -1,0 +1,66 @@
+{
+    "polevky": [
+        {
+            "id": 1,
+            "mnozstvi": "0,3 l",
+            "jidlo": "Domácí česneková polévka se sýrem a osmaženým chlebem",
+            "alergeny": "1, 7",
+            "cena": "55"
+        },
+        {
+            "id": 2,
+            "mnozstvi": "0,3 l",
+            "jidlo": "Zeleninová krémová polévka",
+            "alergeny": "1, 7",
+            "cena": "49"
+        }
+    ],
+    "doporucujeme": [
+        {
+            "id": 1,
+            "mnozstvi": "150g",
+            "jidlo": "Smažený vepřový řízek z pečeně, vařené petrželové brambory, rajčatový salát",
+            "alergeny": "1, 3, 7",
+            "cena": "179"
+        }
+    ],
+    "hotova_jidla": [
+        {
+            "id": 1,
+            "mnozstvi": "100g",
+            "jidlo": "Smažený kuřecí řízek, domácí bramborový salát",
+            "alergeny": "1, 3, 9, 10",
+            "cena": "140"
+        },
+        {
+            "id": 2,
+            "mnozstvi": "350g",
+            "jidlo": "Italské těstoviny \"PENNE\" v bylinkovo-rajčatové salse podávané s grilovaným kuřecím masem, parmezánové hoblinky",
+            "alergeny": "1, 3, 7, 12",
+            "cena": "135"
+        },
+        {
+            "id": 3,
+            "mnozstvi": "130g",
+            "jidlo": "Grilované kuřecí prso v medovo-citronové omáčce, smažené hranolky, rukola",
+            "alergeny": "1, 3, 7",
+            "cena": "155"
+        },
+        {
+            "id": 4,
+            "mnozstvi": "350g",
+            "jidlo": "Italské těstoviny \"PENNE\" v bylinkovo-rajčatové salse podávané s grilovaným kuřecím masem, parmezánové hoblinky",
+            "alergeny": "1, 3, 7, 12",
+            "cena": "135"
+        }
+    ],
+    "dezert": [
+        {
+            "id": 1,
+            "mnozstvi": "100g",
+            "jidlo": "Domácí jablečný štrůdl se šlehačkou",
+            "alergeny": "1, 3, 7, 8",
+            "cena": "79"
+        }
+    ]
+}

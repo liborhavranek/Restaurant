@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: black !important;
+}
+
+
+.container {
+    text-align: center;
+    color:white;
+}
+
+table.table {
+    background-color: black;
+    color: white;
+    border: none;
+}
+table.table thead th {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+table.table tbody td {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.border-div{
+    border: 2px solid white;
+    border-radius: 3%;
+}
